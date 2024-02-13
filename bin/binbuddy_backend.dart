@@ -1,4 +1,4 @@
-import 'package:binbuddy_backend/binbuddy_backend.dart' as lib;
+import 'package:binbuddy_backend/router.dart' as router;
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 
@@ -6,7 +6,7 @@ void main() async {
   var handler =
       const Pipeline()
       .addMiddleware(logRequests())
-      .addHandler(lib.echoRequest);
+      .addHandler(router.routeRequest);
 
   var server = await shelf_io.serve(handler, 'localhost', 8080);
 

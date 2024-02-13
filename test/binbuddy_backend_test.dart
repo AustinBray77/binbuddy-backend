@@ -1,4 +1,4 @@
-import 'package:binbuddy_backend/binbuddy_backend.dart';
+import 'package:binbuddy_backend/requests.dart';
 import 'package:test/test.dart';
 
 void main() {
